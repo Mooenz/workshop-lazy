@@ -1,4 +1,5 @@
 {
+  "homepage":"https://mooenz.github.io/workshop-lazy'",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
