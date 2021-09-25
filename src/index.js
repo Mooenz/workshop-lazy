@@ -7,14 +7,14 @@ import { registerImage, clear } from "./lazy";
 const CONTAINER_IMAGES = document.querySelector(".images");
 const CONTAINER_CONTENT = document.querySelector(".container_content");
 
-const MAX = 122;
-const MIN = 1;
+const MAX = 12200;
+const MIN = 1000;
 
 const numberRandom = () => Math.floor(Math.random() * (MIN - MAX) + MAX);
 
 function renderImages() {
   const contenedor = document.createElement("div");
-  contenedor.classList = "flex justify-center my-4";
+  contenedor.classList = "flex justify-center";
 
   const bg_load = document.createElement("div");
   bg_load.classList = "bg-gray-300 min-h-300";
@@ -23,7 +23,7 @@ function renderImages() {
   image.alt = "img random";
   image.width = 400;
   image.height = 300;
-  image.dataset.src = `https://source.unsplash.com/random`;
+  image.dataset.src = `https://source.unsplash.com/random/300x200?sig=${numberRandom()}`;
 
   bg_load.append(image);
   contenedor.append(bg_load);

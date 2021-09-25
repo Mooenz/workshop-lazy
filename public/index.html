@@ -54,25 +54,15 @@
         >
           Lazy loading
         </h3>
-        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+        <p class="mt-10 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
           Plugin en vanilla JavaScript para cargar imágenes con lazy loading
-          <br />
-          <br />
-          Las imágenes agregadas no se descagarán hasta que seaa visibles en la
-          pantalla
         </p>
 
-        <div class="container_content">
-          <label for="agregar"
-            >Agrega una nueva imagen al final de la lista</label
-          >
+        <div class="container_content mt-5">
           <button
             id="add"
             class="
               font-bold
-              flex
-              mx-auto
-              my-3
               bg-indigo-600
               text-white
               rounded
@@ -85,13 +75,25 @@
           </button>
           <button
             id="clear"
-            class="flex mx-auto my-3 text-indigo-600 font-bold"
+            class="
+              text-indigo-600
+              font-bold
+              px-3
+              bg-white
+              py-2
+              rounded
+              border-2
+              border-transparent
+              hover:border-indigo-600
+              boxing
+              h-10
+            "
           >
             Limpiar
           </button>
         </div>
 
-        <div class="images"></div>
+        <div class="images grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-none gap-4 my-5"></div>
       </div>
     </div>
     <!-- Add more scripts here -->

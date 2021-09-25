@@ -34,8 +34,8 @@ export const clear = (nodoContainerImages) => {
 
 function showMessage() {
   return console.log(`
-            🔵 Total de imagenes: ${createImage}
-            🟡 Imagenes cargadas: ${imageLoad}
-            ${"-".repeat(50)}
-          `);
+    🛸 Total de imagenes: ${createImage}
+    🚀 Imagenes cargadas: ${imageLoad}
+  ${"-".repeat(50)}
+  `);
 }
