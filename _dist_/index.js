@@ -2,7 +2,7 @@
  * This file is just a silly example to show everything working in the browser.
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
-import { registerImage } from "./lazy.js";
+import { registerImage, clear } from "./lazy.js";
 
 const CONTAINER_IMAGES = document.querySelector(".images");
 const CONTAINER_CONTENT = document.querySelector(".container_content");
@@ -12,37 +12,33 @@ const MIN = 1;
 
 const numberRandom = () => Math.floor(Math.random() * (MIN - MAX) + MAX);
 
-
 function renderImages() {
   const contenedor = document.createElement("div");
-  contenedor.classList = "m-4 bg-gray-300";
-  contenedor.width = 400;
-  contenedor.height = 300;
+  contenedor.classList = "flex justify-center my-4";
+
+  const bg_load = document.createElement("div");
+  bg_load.classList = "bg-gray-300 min-h-300";
 
   const image = document.createElement("img");
-  image.dataset.src = `https://randomfox.ca/images/${numberRandom()}.jpg`;
-  image.classList = "mx-auto";
   image.alt = "img random";
   image.width = 400;
   image.height = 300;
+  image.dataset.src = `https://source.unsplash.com/random`;
 
-
-  contenedor.append(image);
+  bg_load.append(image);
+  contenedor.append(bg_load);
 
   registerImage(image);
-
-  createImage += 1;
-  showMessage();
-  
-  CONTAINER_IMAGES.append(contenedor);
+  return contenedor;
 }
 
 function click(ev) {
   const target = ev.target.id;
   if (target === "add") {
-    renderImages();
+    const newImage = renderImages();
+    CONTAINER_IMAGES.append(newImage);
   } else if (target === "clear") {
-    console.log(target);
+    clear(CONTAINER_IMAGES);
   }
 }
 
