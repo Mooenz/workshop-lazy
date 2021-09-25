@@ -12,9 +12,10 @@ const loadImage = (entry) => {
   image.src = url;
   //deje de observar ya que se cunplio con el objetivo
   observation.unobserve(image);
-
-  imageLoad += 1;
-  showMessage();
+  image.onload = () => { 
+    imageLoad += 1;
+    showMessage();
+  }
 };
 
 const observation = new IntersectionObserver((entries) => {
@@ -35,7 +36,7 @@ export const clear = (nodoContainerImages) => {
 
 function showMessage() {
   return console.log(`
-            🔵 Total de imagenes: ${imageLoad}
+            🔵 Total de imagenes: ${createImage}
             🟡 Imagenes cargadas: ${imageLoad}
             ${"-".repeat(50)}
           `);
