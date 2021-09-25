@@ -23,7 +23,7 @@ function renderImages() {
   image.alt = "img random";
   image.width = 400;
   image.height = 300;
-  image.dataset.src = `https://randomfox.ca/images/${numberRandom()}.jpg`;
+  image.dataset.src = `https://source.unsplash.com/random`;
 
   bg_load.append(image);
   contenedor.append(bg_load);

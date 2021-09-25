@@ -12,10 +12,9 @@ const loadImage = (entry) => {
   image.src = url;
   //deje de observar ya que se cunplio con el objetivo
   observation.unobserve(image);
-  image.onload = () => { 
-    imageLoad += 1;
-    showMessage();
-  }
+
+  imageLoad += 1;
+  showMessage();
 };
 
 const observation = new IntersectionObserver((entries) => {
@@ -23,16 +22,15 @@ const observation = new IntersectionObserver((entries) => {
 });
 
 export const registerImage = (image) => {
-  observation.observe(image);  
+  observation.observe(image);
   createImage += 1;
-  showMessage(); 
+  showMessage();
 };
 
 export const clear = (nodoContainerImages) => {
-  nodoContainerImages.innerHTML="";
-  createImage = 0,
-  imageLoad = 0;
-}
+  nodoContainerImages.innerHTML = "";
+  (createImage = 0), (imageLoad = 0);
+};
 
 function showMessage() {
   return console.log(`
@@ -40,10 +38,4 @@ function showMessage() {
             🟡 Imagenes cargadas: ${imageLoad}
             ${"-".repeat(50)}
           `);
-};
-
-/**
- * 1. Colocar un recuadro gris antes de cargar la imagen
- * 2. boton al limpiar eline todo el html de las imagenes
- * 3. reporte del total de imagenes que se han creado y el total de imagenes que se han cargado
- */
+}
