@@ -1,4 +1,4 @@
 # **Hi 👋, Thaks for your visit 🥰**
-Its my second web app, Lazy is a aguacate shop where you will find aguacate ready for comsumption.
+Its my second web app, Lazy is a image generator, loaded with a lazy load effect.
 
 ***With ❤️ Mooenz***
