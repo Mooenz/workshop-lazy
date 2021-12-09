@@ -1,4 +1,28 @@
-# **Hi 👋, Thaks for your visit 🥰**
-Its my second web app, Lazy is a image generator, loaded with a lazy load effect.
+# **Workshop lazyload** 👋
+Lazyload is a image generator, loaded with a lazy load effect.
 
-***With ❤️ Mooenz***
+## **Demo** 🚀
+
+[View Demo](https://mooenz.github.io/workshop-lazy/)
+
+## **Tools** 🔨
+
+- HTML
+- SCSS
+- SnowPack
+- JS Vanilla
+
+## **Preview** 📷
+
+![Preview Proyecto](./preview.jpg)
+
+## **Contact** 📧
+
+- Linkedin [Mooenz](https://www.linkedin.com/in/mooenz/)
+- Web Site [Curriculum Vitae](https://mooenz.github.io/curriculum-vitae/)
+
+## **Licencie** 🛸
+
+This project is MIT licensed
+
+***With*** ❤️ ***Mooenz***
